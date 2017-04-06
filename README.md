@@ -3,6 +3,16 @@ Sample project for running Cascading-jdbc on Hortonworks
 
 # Installation and Deployment
 
+Use gradle as a build system. This project was developed and tested using
+* Gradle 3.4
+* Hortonworks Sandbox 2.4
+* JDK 8, compiling for JDK 7 (due to Java-Version on the sandbox)
+
+Use
+
+	gradle uploadToHortonworksSandbox
+
+to upload the packaged project to the sandbox. Adjust the target path before!
 
 # Getting started
 
@@ -16,5 +26,6 @@ Sample project for running Cascading-jdbc on Hortonworks
   * Update ext.targetDir (approx. line 53 in build.gradle), create the directory on the server once, and run gradle uploadToHortonworksSandbox 
 * Put the job to yarn, using 
 
-yarn jar cascading-jdbc-on-hdp2.jar net.brunel.TestJdbc1
+	yarn jar cascading-jdbc-on-hdp-1.0.0.jar net.brunel.TestJdbc1
  
+from the command line shell.
